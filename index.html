@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav>
+        <div id="searchbox">
+            <input id="searchterm" type="search" value="Search..."/>
+            <img src="images/search.png" /><br />
+            <hr id="searchseparator" />
+        </div>
+        <div id="logocontainer">
+            <img src="images/logo.png" />
+        </div>
+        <div id="menubox">
+            <ul id="menu">
+                <li><div id="walletitem" class="menuitem">Wallet</div>
+                    <ul id="walletmenu">
+                        <li><div class="walletmenuitem">Open Wallet</div></li>
+                        <li><div class="walletmenuitem">Create New Wallet</div></li>
+                        <li><div class="walletmenuitem">Restore Wallet</div></li>
+                    </ul>
+                </li>
+                <li><div id="transactionsitem" class="menuitem">Transactions</div></li>
+                <li><div id="addressbookitem" class="menuitem">Address Book</div></li>
+            </ul>
+        </div>
+        <div id="statusbox">
+            Downloading blockchain...<br />
+            <progress id="blockchainprogress" value="22" max="100"></progress>
+            <div id="connectionstatus">
+                <img src="images/stateconnected.png" />Connected
+            </div>
+        </div>
+    </nav>
+    <div role="main">
+        <div id="infobox">
+            <div class="informer" id="balanceview">
+                <div class ="informertitle">BALANCE</div>
+                <div class ="informervalue">1200.000000000000</div>
+            </div>
+            <div class="informer" id="unlockedview">
+                <div class ="informertitle">UNLOCKED BALANCE</div>
+                <div class ="informervalue">1200.000000000000</div>
+            </div>
+            <div class="informer" id="unconfirmedview">
+                <div class ="informertitle">UNCONFIRMED (2 of 10) BALANCE</div>
+                <div class ="informervalue">100.000000000000</div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Wallet</h1>
+            <table id="restoredata">
+                <tr>
+                    <td><div class="tablelabel">Passphrase</div></td>
+                    <td><input type="password" value="test test test test test test test test test test test test test test test test test test test test test test test test"/></td>
+                </tr>
+                <tr>
+                    <td><div class="tablelabel">Destination</div></td>
+                    <td><input type="text" value="C:\Boolberry\wallet\some_old_wallet.bbr"/></td>
+                </tr>
+            </table>
+            <input id="openfile" type="button" value="Open..."/>
+            <div id="restoreaction">RESTORE WALLET</div>
+        </div>
+    </div>
+</body>
+</html>

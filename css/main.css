@@ -1,0 +1,267 @@
+﻿body {
+    margin:0px;
+    padding:0px;
+    background-color: #F4F6F6;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    float:left;
+    background-color: RGB(46, 50, 67);
+    text-align:center;
+    color: RGB(147, 153,176); 
+}
+
+#searchbox {
+    padding-top:10px;
+    padding-bottom:0px;
+    padding-left:10px;
+    padding-right: 10px;
+    height: 40px;
+    background-color:#0081BE;
+}
+
+#logocontainer {
+    padding: 70px;
+}
+
+div[role="main"] {
+    float: left;
+    background-color: #F4F6F6;
+    height:100%;
+}
+
+#searchterm {
+    background-color:#0081BE;
+    border:none;
+    color:#ffffff;
+    margin-top: 5px;
+    padding-bottom:0px; 
+    margin-bottom:0px;
+    font-style:italic;
+}
+
+#searchseparator {
+    color:#ffffff;
+    background-color:#ffffff;
+    padding:0px;
+    margin:0px;
+    border:none;
+    height:1px;
+}
+
+#searchicon {
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+
+#menu, #walletmenu {
+    margin: 0;
+    list-style-position: outside;
+    line-height: 1.2em;
+    text-align: left;
+    list-style-type: none;
+}
+
+#menu {
+    padding: 0;
+}
+
+#walletmenu {
+}
+
+.menuitem {
+    background-position: 10px;
+    border-left: solid, 2px;
+    border-color: #006592;
+    border-left-style: solid;
+    border-left-width: thick;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    padding-top:15px;
+    font-size:larger;
+    height: 30px;
+}
+
+.menuitem:hover {
+    border-color: #0081BE;
+    color:#ffffff;
+}
+
+#walletitem {
+    background-image: url('../images/walleticon.png');
+}
+
+#walletitem:hover {
+    background-image: url('../images/walleticonactive.png');
+}
+
+#transactionsitem {
+    background-image: url('../images/transactionsicon.png');
+}
+
+#transactionsitem:hover {
+    background-image: url('../images/transactionsiconactive.png');
+}
+
+#addressbookitem {
+    background-image: url('../images/addressbookicon.png');
+}
+
+#addressbookitem:hover {
+    background-image: url('../images/addressbookiconactive.png');
+}
+
+.walletmenuitem {
+    background-position: 5px;
+    border-left: solid, 2px;
+    border-color: RGB(147, 153,176);
+    border-left-style: solid;
+    border-left-width: thick;
+    background-image: url('../images/listicon.png');
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.walletmenuitem:hover {
+    border-color: #ffffff;
+    background-image: url('../images/listiconactive.png');
+    color:#ffffff;
+}
+
+#blockchainprogress {
+    width: 100%;
+    color: #0000ff;
+    background-color:#ffffff;
+    border: none;
+    height: 5px;
+}
+
+#statusbox {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-style: italic;
+    font-size: small;
+}
+
+#connectionstatus {
+    background-image: url('../images/connectionq.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-top: 20px;
+    height: 40px;
+    text-align: left;
+}
+
+#connectionstatus img{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#infobox {
+    background-color: RGB(46, 50, 67);
+    text-align:left;
+    color: RGB(147, 153,176); 
+    padding-top:5px;
+    padding-bottom:0px;
+    padding-left:10px;
+    padding-right: 10px;
+    height: 47px;
+    min-width: 850px;
+    font-size:small;
+}
+
+.informer {
+    background-position: left center;
+    padding-top: 0px;
+    padding-left: 25px;
+    float: left;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+}
+
+    .informer .informertitle {
+        font-weight: bold;
+        color:#008DD2;
+    }
+
+    .informer .informervalue {
+        color:#ffffff;
+    }
+
+
+#balanceview {
+    background-image: url('../images/balance.png');
+}
+
+#unlockedview {
+    background-image: url('../images/unlocked.png');
+}
+
+#unconfirmedview {
+    background-image: url('../images/unconfirmed.png');
+}
+
+.content {
+    background-color: #F4F6F6;
+    padding-top: 30px;
+    padding-left: 30px;
+    color:#9399B0;
+    height:100%;
+}
+
+    .content h1 {
+        font-weight:normal;
+    }
+
+#restoredata {
+    border-spacing: 1px;
+}
+
+    #restoredata td {
+        padding:2px;
+    }
+
+    #restoredata input {
+        border:none;
+        height: 23px;
+        width: 500px;
+        color:#9399B0;
+    }
+
+.tablelabel {
+    border: solid thin;
+    border-color:#9399B0;
+    border-radius: 5px;
+    width: 100px;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    font-size:small;
+    background-color:#ffffff;
+}
+
+#openfile {
+    padding: 2px 4px 2px 8px;
+    margin-left: 10px;
+    font-size: small;
+    background-color: #9399B0;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+}
+
+#restoreaction {
+    background-position: 10px;
+    background-color: #ffffff;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: x-large;
+    width: 300px;
+    margin-top: 20px;
+    background-image: url('../images/action.png');
+    background-repeat: no-repeat;
+}
