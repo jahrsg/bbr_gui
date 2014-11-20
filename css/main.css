@@ -67,9 +67,6 @@ div[role="main"] {
     padding: 0;
 }
 
-#walletmenu {
-}
-
 .menuitem {
     background-position: 10px;
     border-left: solid, 2px;
@@ -83,7 +80,7 @@ div[role="main"] {
     height: 30px;
 }
 
-.menuitem:hover {
+.menuitem:hover, .menuitem[data-state='active'] {
     border-color: #0081BE;
     color:#ffffff;
 }
@@ -92,7 +89,7 @@ div[role="main"] {
     background-image: url('../images/walleticon.png');
 }
 
-#walletitem:hover {
+#walletitem:hover, #walletitem[data-state='active'] {
     background-image: url('../images/walleticonactive.png');
 }
 
@@ -100,7 +97,7 @@ div[role="main"] {
     background-image: url('../images/transactionsicon.png');
 }
 
-#transactionsitem:hover {
+#transactionsitem:hover, #transactionsitem[data-state='active'] {
     background-image: url('../images/transactionsiconactive.png');
 }
 
@@ -108,7 +105,7 @@ div[role="main"] {
     background-image: url('../images/addressbookicon.png');
 }
 
-#addressbookitem:hover {
+#addressbookitem:hover, #addressbookitem[data-state='active'] {
     background-image: url('../images/addressbookiconactive.png');
 }
 
@@ -123,7 +120,7 @@ div[role="main"] {
     padding-left: 20px;
 }
 
-.walletmenuitem:hover {
+.walletmenuitem:hover, .walletmenuitem[data-state='active'] {
     border-color: #ffffff;
     background-image: url('../images/listiconactive.png');
     color:#ffffff;
