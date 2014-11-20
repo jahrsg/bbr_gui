@@ -19,9 +19,9 @@
             <ul id="menu">
                 <li><div id="walletitem" class="menuitem" data-state="active">Wallet</div>
                     <ul id="walletmenu">
-                        <li><div class="walletmenuitem">Open Wallet</div></li>
+                        <li><div class="walletmenuitem" data-state="active">Open Wallet</div></li>
                         <li><div class="walletmenuitem">Create New Wallet</div></li>
-                        <li><div class="walletmenuitem" data-state="active">Restore Wallet</div></li>
+                        <li><div class="walletmenuitem">Restore Wallet</div></li>
                     </ul>
                 </li>
                 <li><div id="transactionsitem" class="menuitem">Transactions</div></li>
@@ -52,19 +52,36 @@
             </div>
         </div>
         <div class="content">
-            <h1>Wallet</h1>
-            <table id="restoredata">
-                <tr>
-                    <td><div class="tablelabel">Passphrase</div></td>
-                    <td><input type="password" value="test test test test test test test test test test test test test test test test test test test test test test test test"/></td>
-                </tr>
-                <tr>
-                    <td><div class="tablelabel">Destination</div></td>
-                    <td><input type="text" value="C:\Boolberry\wallet\some_old_wallet.bbr"/></td>
-                </tr>
-            </table>
-            <input id="openfile" type="button" value="Open..."/>
-            <div id="restoreaction">RESTORE WALLET</div>
+            <div class="screen" id="restorewallet">
+                <h1>Wallet</h1>
+                <table class="actionparams">
+                    <tr>
+                        <td><div class="tablelabel">Passphrase</div></td>
+                        <td><input type="password" value="test test test test test test test test test test test test test test test test test test test test test test test test"/></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Destination</div></td>
+                        <td><input type="text" value="C:\Boolberry\wallet\some_old_wallet.bbr"/></td>
+                    </tr>
+                </table>
+                <input class="openfile" type="button" value="Open..."/>
+                <div class="executeaction">RESTORE WALLET</div>
+            </div>
+            <div class="screen" id="openwallet" data-state="active">
+                <h1>Open Wallet</h1>
+                <table class="actionparams">
+                    <tr>
+                        <td><div class="tablelabel">Password</div></td>
+                        <td><input type="password" value="testtest123"/></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Destination</div></td>
+                        <td><input type="text" value="C:\Boolberry\wallet\some_wallet.bbr"/></td>
+                    </tr>
+                </table>
+                <input class="openfile" type="button" value="Open..."/>
+                <div class="executeaction">OPEN WALLET</div>
+            </div>
         </div>
     </div>
 </body>

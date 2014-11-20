@@ -212,15 +212,15 @@ div[role="main"] {
         font-weight:normal;
     }
 
-#restoredata {
+.actionparams {
     border-spacing: 1px;
 }
 
-    #restoredata td {
+    .actionparams td {
         padding:2px;
     }
 
-    #restoredata input {
+    .actionparams input {
         border:none;
         height: 23px;
         width: 500px;
@@ -240,7 +240,7 @@ div[role="main"] {
     background-color:#ffffff;
 }
 
-#openfile {
+.openfile {
     padding: 2px 4px 2px 8px;
     margin-left: 10px;
     font-size: small;
@@ -250,7 +250,7 @@ div[role="main"] {
     color: #ffffff;
 }
 
-#restoreaction {
+.executeaction {
     background-position: 10px;
     background-color: #ffffff;
     padding-left: 40px;
@@ -262,3 +262,11 @@ div[role="main"] {
     background-image: url('../images/action.png');
     background-repeat: no-repeat;
 }
+
+.screen {
+    display: none;
+}
+
+    .screen[data-state='active'] {
+        display: block;
+    }
