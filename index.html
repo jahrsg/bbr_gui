@@ -17,14 +17,14 @@
         </div>
         <div id="menubox">
             <ul id="menu">
-                <li><div id="walletitem" class="menuitem" data-state="active">Wallet</div>
+                <li><div id="walletitem" class="menuitem">Wallet</div>
                     <ul id="walletmenu">
                         <li><div class="walletmenuitem">Open Wallet</div></li>
-                        <li><div class="walletmenuitem" data-state="active">Create New Wallet</div></li>
+                        <li><div class="walletmenuitem">Create New Wallet</div></li>
                         <li><div class="walletmenuitem">Restore Wallet</div></li>
                     </ul>
                 </li>
-                <li><div id="transactionsitem" class="menuitem">Transactions</div></li>
+                <li><div id="transactionsitem" class="menuitem" data-state="active">Transactions (1)</div></li>
                 <li><div id="addressbookitem" class="menuitem">Address Book</div></li>
             </ul>
         </div>
@@ -67,7 +67,7 @@
                 <input class="openfile" type="button" value="Open..."/>
                 <div class="executeaction">OPEN WALLET</div>
             </div>
-            <div class="screen" id="createwallet" data-state="active">
+            <div class="screen" id="createwallet">
                 <h1>Wallet</h1>
                 <table class="actionparams">
                     <tr>
@@ -104,6 +104,172 @@
                 </table>
                 <input class="openfile" type="button" value="Open..."/>
                 <div class="executeaction">RESTORE WALLET</div>
+            </div>
+            <div class="screen" id="transactions" data-state="active">
+                <h1>Transactions</h1>
+                <table class="trxlist">
+                    <tr>
+                        <td class="iconcell" data-type="unconfirmed">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">100.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">UNCONFIRMED</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-22 22:58</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">SENDER</div>
+                            <div class="infocell">N/A</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="out">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">600.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">SENT</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-21 11:13</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">RECEPIENT</div>
+                            <div class="infocell">...</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="out">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">100.230000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">SENT</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-21 10:43</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">RECEPIENT</div>
+                            <div class="infocell">@zoidberg</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="in">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">200.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">RECEIVED</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-20 21:19</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">SENDER</div>
+                            <div class="infocell">N/A</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="in">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">300.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">RECEIVED</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-20 20:51</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">SENDER</div>
+                            <div class="infocell">N/A</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="in">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">450.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">RECEIVED</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-20 19:18</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">SENDER</div>
+                            <div class="infocell">N/A</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="iconcell" data-type="in">&nbsp;</td>
+                        <td>
+                            <div class="infocellheader">AMOUNT</div>
+                            <div class="infocell">132.000000000000</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">STATUS</div>
+                            <div class="infocell">RECEIVED</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">DATE</div>
+                            <div class="infocell">2014-10-20 19:01</div>
+                        </td>
+                        <td>
+                            <div class="infocellheader">SENDER</div>
+                            <div class="infocell">N/A</div>
+                        </td>
+                        <td class="infocellmoreicon">
+                            <div class="infocellheader">MORE</div>
+                            <div class="infocell">DETAILS...</div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

@@ -54,6 +54,9 @@ div[role="main"] {
     padding-bottom:0px;
     margin-bottom:0px;
 }
+#menubox {
+    height: 300px;
+}
 
 #menu, #walletmenu {
     margin: 0;
@@ -66,6 +69,14 @@ div[role="main"] {
 #menu {
     padding: 0;
 }
+
+#walletmenu {
+    display: none;
+}
+
+    #walletmenu[data-state='active'] {
+        display: block;
+    }
 
 .menuitem {
     background-position: 10px;
@@ -135,7 +146,7 @@ div[role="main"] {
 }
 
 #statusbox {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-style: italic;
@@ -270,3 +281,50 @@ div[role="main"] {
     .screen[data-state='active'] {
         display: block;
     }
+
+.trxlist {
+    border-spacing: 4px;
+}
+
+.trxlist td {
+    background-color:#ffffff;
+    padding: 5px;
+}
+
+.iconcell {
+    background-position: center center;
+    width: 62px;
+    height: 40px;
+    background-repeat: no-repeat;
+    border:none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+    .iconcell[data-type='in'] {
+        background-image: url('../images/intrx.png');
+    }
+
+    .iconcell[data-type='out'] {
+        background-image: url('../images/outtrx.png');
+    }
+
+    .iconcell[data-type='unconfirmed'] {
+    background-position: right top;
+    background-image: url('../images/unconfirmedtrx.png');
+    border-color: #2FAC33;
+    color: #2FAC33;
+    border: solid 2px;
+}
+
+.infocellheader {
+    font-size: x-small;
+    min-width: 120px;
+}
+
+.infocellmoreicon {
+    background-position: 175px center;
+    background-image: url('../images/more.png');
+    background-repeat: no-repeat;
+    width: 200px;
+}
