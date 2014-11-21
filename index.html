@@ -17,15 +17,15 @@
         </div>
         <div id="menubox">
             <ul id="menu">
-                <li><div id="walletitem" class="menuitem" data-state="active">Wallet</div>
-                    <ul id="walletmenu" data-state="active">
+                <li><div id="walletitem" class="menuitem">Wallet</div>
+                    <ul id="walletmenu">
                         <li><div class="walletmenuitem">Open Wallet</div></li>
                         <li><div class="walletmenuitem">Create New Wallet</div></li>
                         <li><div class="walletmenuitem">Restore Wallet</div></li>
                     </ul>
                 </li>
                 <li><div id="transactionsitem" class="menuitem">Transactions (1)</div></li>
-                <li><div id="addressbookitem" class="menuitem">Address Book</div></li>
+                <li><div id="addressbookitem" class="menuitem" data-state="active">Address Book</div></li>
             </ul>
         </div>
         <div id="statusbox">
@@ -271,7 +271,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="screen" id="wallet" data-state="active">
+            <div class="screen" id="wallet">
                 <h1>Wallet</h1>
                 <table class="actionparams">
                     <tr>
@@ -359,6 +359,42 @@
                             <div class="infocellheader">MORE</div>
                             <div class="infocell">DETAILS...</div>
                         </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="screen" id="addressbook" data-state="active">
+                <h1>Create New Address</h1>
+                <table class="actionparams">
+                    <tr>
+                        <td><div class="tablelabel">Name</div></td>
+                        <td><input type="text" value="Bitcrea designer"/></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Address</div></td>
+                        <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Alias (optional)</div></td>
+                        <td><input type="text" value="@bitcrea"/></td>
+                    </tr>
+                </table>
+                <div class="executeaction">ADD NEW ADDRESS</div>
+                <h1>Address Book</h1>
+                <table class="actionparams">
+                    <tr>
+                        <td><div class="tablelabel">Bitcrea</div></td>
+                        <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
+                        <td><div class="copybtn">Copy</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Gambling</div></td>
+                        <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
+                        <td><div class="copybtn">Copy</div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="tablelabel">Second</div></td>
+                        <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
+                        <td><div class="copybtn">Copy</div></td>
                     </tr>
                 </table>
             </div>
