@@ -345,7 +345,7 @@ div[role="main"] {
 
 .close {
     background-position: center center;
-    width: 40px;
+    width: 32px;
     background-image: url('../images/close.png');
     background-repeat: no-repeat;
 }
@@ -454,7 +454,7 @@ div[role="main"] {
     }
 
 .sendbutton {
-    background-position: 60px center;
+    background-position: 55px center;
     width: 80px;
     background-color: #ffffff;
     border: none;
