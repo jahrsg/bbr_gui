@@ -262,6 +262,11 @@ div[role="main"] {
     max-width: 100px;
 }
 
+    .openfile:hover {
+        border:solid 1px;
+        border-color:#9399B0;
+    }
+
 .executeaction {
     background-position: 10px;
     background-color: #ffffff;
@@ -277,6 +282,11 @@ div[role="main"] {
     border-radius: 5px;
     color: #9399B0;
 }
+
+    .executeaction:hover {
+        border:solid 1px;
+        border-color:#9399B0;
+    }
 
 .screen {
     display: none;
@@ -340,6 +350,11 @@ div[role="main"] {
     background-repeat: no-repeat;
 }
 
+    .close:hover {
+        border:solid 1px;
+        border-color:#9399B0;
+    }
+
 .addressfield {
     width:90%;
     background-color:#ffffff;
@@ -362,6 +377,11 @@ div[role="main"] {
     padding-left:0;
     height:30px;
 }
+
+    .addressbutton:hover {
+        border:solid 1px;
+        border-color:#9399B0;
+    }
 
 .amountfield {
     width:45%;
@@ -428,6 +448,11 @@ div[role="main"] {
     text-align: left;
 }
 
+    .morebutton:hover {
+        border:solid 1px;
+        border-color:#0081BE;
+    }
+
 .sendbutton {
     background-position: 60px center;
     width: 80px;
@@ -442,6 +467,11 @@ div[role="main"] {
     text-align: left;
 }
 
+    .sendbutton:hover {
+        border:solid 1px;
+        border-color:#0081BE;
+    }
+
 .copybtn {
     padding: 2px 4px 2px 8px;
     margin-left: 10px;
@@ -452,3 +482,8 @@ div[role="main"] {
     border: none;
     color: #ffffff;
 }
+
+    .copybtn:hover {
+        border:solid 1px;
+        border-color:#9399B0;
+    }
