@@ -4,6 +4,8 @@
     <title></title>
     <link href="css/main.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <script src="scripts/jquery-2.1.1.js"></script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
     <nav>
@@ -17,15 +19,15 @@
         </div>
         <div id="menubox">
             <ul id="menu">
-                <li><div id="walletitem" class="menuitem">Wallet</div>
-                    <ul id="walletmenu">
-                        <li><div class="walletmenuitem">Open Wallet</div></li>
-                        <li><div class="walletmenuitem">Create New Wallet</div></li>
-                        <li><div class="walletmenuitem">Restore Wallet</div></li>
+                <li><div id="walletitem" class="menuitem" data-state="active">Wallet</div>
+                    <ul id="walletmenu" data-state="active">
+                        <li><div id="openwalletitem" class="walletmenuitem" data-state="active">Open Wallet</div></li>
+                        <li><div id="createwalletitem"  class="walletmenuitem">Create New Wallet</div></li>
+                        <li><div id="restorewalletitem" class="walletmenuitem">Restore Wallet</div></li>
                     </ul>
                 </li>
                 <li><div id="transactionsitem" class="menuitem">Transactions (1)</div></li>
-                <li><div id="addressbookitem" class="menuitem" data-state="active">Address Book</div></li>
+                <li><div id="addressbookitem" class="menuitem">Address Book</div></li>
             </ul>
         </div>
         <div id="statusbox">
@@ -52,7 +54,7 @@
             </div>
         </div>
         <div class="content">
-            <div class="screen" id="openwallet">
+            <div class="screen" id="openwallet" data-state="active">
                 <h1>Open Wallet</h1>
                 <table class="actionparams">
                     <tr>
@@ -65,7 +67,9 @@
                     </tr>
                 </table>
                 <input class="openfile" type="button" value="Open..."/>
-                <div class="executeaction">OPEN WALLET</div>
+                <p>
+                <input type="button" class="executeaction" value="OPEN WALLET" />
+                </p>
             </div>
             <div class="screen" id="createwallet">
                 <h1>Wallet</h1>
@@ -88,7 +92,9 @@
                     </tr>
                 </table>
                 <input class="openfile" type="button" value="Open..."/>
-                <div class="executeaction">CREATE NEW WALLET</div>
+                <p>
+                <input type="button" class="executeaction" value="CREATE NEW WALLET" />
+                </p>
             </div>
             <div class="screen" id="restorewallet">
                 <h1>Wallet</h1>
@@ -103,7 +109,9 @@
                     </tr>
                 </table>
                 <input class="openfile" type="button" value="Open..."/>
-                <div class="executeaction">RESTORE WALLET</div>
+                <p>
+                <input type="button" class="executeaction" value="RESTORE WALLET" />
+                </p>
             </div>
             <div class="screen" id="transactions">
                 <h1>Transactions</h1>
@@ -276,18 +284,24 @@
                 <table class="actionparams">
                     <tr>
                         <td><div class="tablelabel">Destination</div></td>
-                        <td><input type="text" readonly value="1KiUQNbfDkWX4yMcRSoD8h7w5WrTzebgyAfwo6AqT2NaGTQRemxnFs8VwpN2c87wFLQqjcjPb7jpmaw7bvdyghEaLwfKp2h"/></td>
+                        <td>
+                            <input type="text" readonly value="1KiUQNbfDkWX4yMcRSoD8h7w5WrTzebgyAfwo6AqT2NaGTQRemxnFs8VwpN2c87wFLQqjcjPb7jpmaw7bvdyghEaLwfKp2h"/>
+                        </td>
+                        <td><input class="copybtn" type="button" value="Copy"/></td>
                         <td><div class="tablelabel">BALALANCE: 1200.000000000000</div></td>
                         <td><div class="close">&nbsp;</div></td>
                     </tr>
                 </table>
-                <input class="openfile" type="button" value="Copy"/>
+               
                 <h1>Send BBR</h1>
                 <input type="text" class="addressfield" value="ADDRESS..." />
                 <input type="button" class="addressbutton" value="" />
                 <input type="text" class="amountfield" value="AMOUNT..." />
-                MIXIN
+                MIXIN 0
                 <input type="range" class="mixingslider" min="0" max="10", step="1", value="1" />
+                10
+                <input type="button" class="morebutton" value="More" />
+                <br />
                 <input type="button" class="sendbutton" value="SEND" />
                 <h1>Recent Transactions</h1>
                 <table class="trxlist">
@@ -362,7 +376,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="screen" id="addressbook" data-state="active">
+            <div class="screen" id="addressbook">
                 <h1>Create New Address</h1>
                 <table class="actionparams">
                     <tr>
@@ -378,27 +392,34 @@
                         <td><input type="text" value="@bitcrea"/></td>
                     </tr>
                 </table>
-                <div class="executeaction">ADD NEW ADDRESS</div>
+                <p>
+                <input type="button" class="executeaction" value="ADD NEW ADDRESS" />
+                </p>
                 <h1>Address Book</h1>
                 <table class="actionparams">
                     <tr>
                         <td><div class="tablelabel">Bitcrea</div></td>
                         <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
-                        <td><div class="copybtn">Copy</div></td>
+                        <td><input class="copybtn" type="button" value="Copy"/></td>
                     </tr>
                     <tr>
                         <td><div class="tablelabel">Gambling</div></td>
                         <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
-                        <td><div class="copybtn">Copy</div></td>
+                        <td><input class="copybtn" type="button" value="Copy"/></td>
                     </tr>
                     <tr>
                         <td><div class="tablelabel">Second</div></td>
                         <td><input type="text" value="1KjAkQLDtDqNn5TWwufygAP6CMnWk4ySo5YEEBkJxYTLfEFLaiysN1XZzzjFAfv7puRjAz4rQLrHn4TbLqVZzmHe85bfzhr"/></td>
-                        <td><div class="copybtn">Copy</div></td>
+                        <td><input class="copybtn" type="button" value="Copy"/></td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            initialize();
+        });
+    </script>
 </body>
 </html>

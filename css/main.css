@@ -231,7 +231,7 @@ div[role="main"] {
         padding:2px;
     }
 
-    .actionparams input {
+    .actionparams input[type='text'], .actionparams input[type='password'] {
         border:none;
         height: 23px;
         width: 500px;
@@ -273,6 +273,9 @@ div[role="main"] {
     margin-top: 20px;
     background-image: url('../images/action.png');
     background-repeat: no-repeat;
+    border:none;
+    border-radius: 5px;
+    color: #9399B0;
 }
 
 .screen {
@@ -372,13 +375,15 @@ div[role="main"] {
 
 .mixingslider {
     margin-top: 5px;
-    width: 45%;
+    width: 35%;
 	-webkit-appearance: none;
 	border-radius: 5px;
 	box-shadow: inset 0 0 5px #333;
 	background-color: #999;
 	height: 1px;
 	vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 .mixingslider::-moz-range-track {
@@ -409,18 +414,32 @@ div[role="main"] {
 	 width: 8px;
 }
 
+.morebutton {
+    background-position: 5px center;
+    width: 70px;
+    background-color: #ffffff;
+    border: none;
+    background-image: url('../images/settings.png');
+    background-repeat: no-repeat;
+    height: 30px;
+    color: #0081BE;
+    border-radius: 4px;
+    padding-left: 30px;
+    text-align: left;
+}
 
 .sendbutton {
-    background-position: 70px center;
-    width: 90px;
+    background-position: 60px center;
+    width: 80px;
     background-color: #ffffff;
     border: none;
     background-image: url('../images/send.png');
     background-repeat: no-repeat;
     margin-top: 20px;
-    padding-left: -5px;
-    height: 30px;
+    padding-left: 5px;
+    height: 33px;
     color: #0081BE;
+    text-align: left;
 }
 
 .copybtn {
