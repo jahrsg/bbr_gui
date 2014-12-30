@@ -2,6 +2,18 @@
 
 function initialize() {
     console.log("initialize()");
+
+    
+    Qt.update_daemon_state.connect(str_to_obj.bind({ cb: on_update_daemon_state }));
+    Qt.update_wallet_status.connect(str_to_obj.bind({ cb: on_update_wallet_status }));
+    Qt.update_wallet_info.connect(str_to_obj.bind({ cb: on_update_wallet_info }));
+    Qt.money_transfer.connect(str_to_obj.bind({ cb: on_money_transfer }));
+
+    Qt.show_wallet.connect(show_wallet);
+    Qt.hide_wallet.connect(hide_wallet);
+    Qt.set_recent_transfers.connect(str_to_obj.bind({ cb: on_set_recent_transfers }));
+    //  Qt.handle_internal_callback.connect(on_handle_internal_callback);
+    
     // left menu clicks
     $('#walletitem').on('click', onWalletItemClick);
     $('#openwalletitem').on('click', onOpenWalletItemClick);
@@ -35,17 +47,8 @@ function initialize() {
 
     // addressbook screen clicks
     $('#addressbookaddbtn').on('click', on_addrbook_add);
+    $('#addressbooklist .copybtn').on('click', on_address_copy_btn);
 
-
-    Qt.update_daemon_state.connect(str_to_obj.bind({ cb: on_update_daemon_state }));
-    Qt.update_wallet_status.connect(str_to_obj.bind({ cb: on_update_wallet_status }));
-    Qt.update_wallet_info.connect(str_to_obj.bind({ cb: on_update_wallet_info }));
-    Qt.money_transfer.connect(str_to_obj.bind({ cb: on_money_transfer }));
-
-    Qt.show_wallet.connect(show_wallet);
-    Qt.hide_wallet.connect(hide_wallet);
-    Qt.set_recent_transfers.connect(str_to_obj.bind({ cb: on_set_recent_transfers }));
-  //  Qt.handle_internal_callback.connect(on_handle_internal_callback);
 
     fill_addressbook();
 }
@@ -367,6 +370,13 @@ function on_update_daemon_state(info_obj) {
         $("#progresstext").text("Downloading blockchain...");
     } else if (info_obj.daemon_network_state == 2)//daemon_network_state_online
     {
+       if( ($('#wait').attr('data-state') == 'active') ||
+            ($('#openwalletitem').hasClass('is-disabled') && $('#walletitem').hasClass('is-disabled'))) {
+  //      if ($('#wait').attr('data-state') == 'active') {
+            $('#openwalletitem, #createwalletitem, #restorewalletitem').removeClass('is-disabled');
+            $('#wait').removeAttr('data-state');
+            onOpenWalletItemClick();
+        }
         $("#connectionstatusimage").attr("src", "images/stateconnected.png");
         $("#blockchainprogress").attr("value", percents);
         $("#progresstext").text("Synchronized");
@@ -384,8 +394,10 @@ function on_update_daemon_state(info_obj) {
 
 function show_wallet() {
     console.log("show_wallet()");
-    onWalletItemClick();
-    $('#walletitem').removeClass('is-disabled');
+    if ($('#walletitem').hasClass('is-disabled')) {
+        onWalletItemClick();
+        $('#walletitem').removeClass('is-disabled');
+    }
 }
 
 function hide_wallet() {
@@ -418,7 +430,15 @@ function on_addrbook_add() {
     }
     Qt_parent.add_address($('#addressbookname').val(),
         $('#addressbookaddress').val(), $('#addressbookalias').val());
+    $('#addressbookname').val('');
+    $('#addressbookaddress').val('');
+    $('#addressbookalias').val('');
     fill_addressbook();
+}
+
+function on_address_copy_btn() {
+    alert($(this).attr('data-address'));
+    Qt_parent.place_to_clipboard($(this).attr('data-address'));
 }
 
 function fill_addressbook() {
@@ -434,13 +454,16 @@ function fill_addressbook() {
             html += "<tr>";
             html += '<td><div class="tablelabel">' + entry.name + '&nbsp;</div></td>';
             html += '<td><input type="text" value="' + entry.address + '"/></td>';
-            html += '<td><input class="copybtn" type="button" value="Copy"/></td>';
+            html += '<td><input class="copybtn" type="button" value="Copy" data-address="' + entry.address + '"/></td>';
             html += "</tr>";
             list += '<li data-address="' + entry.address + '">' + entry.name + '</li>';
         }
     }
     $('#addressbooklist').html(html);
     $('#walletsendaddresslist ul').html(list);
+
+    $('#addressbooklist .copybtn').on('click', on_address_copy_btn);
+    $('#walletsendaddresslist li').on('click', on_wallet_send_addresslist_click);
 }
 
 function on_wallet_send_address_focus() {

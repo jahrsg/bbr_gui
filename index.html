@@ -20,9 +20,9 @@
         </div>
         <div id="menubox">
             <ul id="menu">
-                <li><div id="openwalletitem" class="menuitem" data-state="active">Open Wallet</div></li>
-                <li><div id="createwalletitem"  class="menuitem">Create New Wallet</div></li>
-                <li><div id="restorewalletitem" class="menuitem">Restore Wallet</div></li>
+                <li><div id="openwalletitem" class="menuitem is-disabled">Open Wallet</div></li>
+                <li><div id="createwalletitem"  class="menuitem is-disabled">Create New Wallet</div></li>
+                <li><div id="restorewalletitem" class="menuitem is-disabled">Restore Wallet</div></li>
                 <li><div id="walletitem" class="menuitem is-disabled">View Wallet</div>
                     <ul id="walletmenu">
                         <li><div id="transactionsitem" class="walletmenuitem">Transactions</div></li>
@@ -57,10 +57,10 @@
             </div>
         </div>
         <div class="content">
-            <div class="screen" id="wait">
+            <div class="screen" id="wait" data-state="active">
                 <h1>Wait, please...</h1>
             </div>
-            <div class="screen" id="openwallet" data-state="active">
+            <div class="screen" id="openwallet">
                 <h1>Open Wallet</h1>
                 <table class="actionparams">
                     <tr>
@@ -236,9 +236,9 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
+ //       $(document).ready(function () {
             initialize();
-        });
+ //       });
     </script>
 </body>
 </html>
